@@ -8,20 +8,18 @@ import * as storage from "./key";
  * @returns {Headers} A Headers object containing necessary request headers.
  */
 export function headers() {
+  const headers = new Headers();
+  headers.append("Content-Type", "application/json");
 
-    const headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-  
-    const token = storage.load(ACCESS_TOKEN_KEY);
-  
-    if (API_KEY) {
-      headers.append('X-Noroff-API-Key', API_KEY);
-    }
-  
-    if (token) {
-      headers.append('Authorization', `Bearer ${token}`);
-    }
-  
-    return headers;
+  const token = storage.load(ACCESS_TOKEN_KEY);
+
+  if (API_KEY) {
+    headers.append("X-Noroff-API-Key", API_KEY);
   }
-  
+
+  if (token) {
+    headers.append("Authorization", `Bearer ${token}`);
+  }
+
+  return headers;
+}
