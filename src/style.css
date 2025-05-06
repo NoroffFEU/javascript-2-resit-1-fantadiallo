@@ -1,0 +1,190 @@
+*{
+list-style: none;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: sans-serif;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+a{
+    text-decoration: none;
+
+}
+button{
+    cursor: pinter;
+    border: none;
+  
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.header{
+    background-color: tomato;
+}
+
+.game-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    padding: 1rem;
+    max-width: 300px;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .game-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .game-card img.game-img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  
+  .game-card h2 {
+    font-size: 1.25rem;
+    color: #222;
+  }
+  
+  .game-card p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+
+  #genreList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 2rem;
+  }
+  .containerGames {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .game-detail {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .game-detail h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #222;
+  }
+  
+  .game-detail .game-img {
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .game-detail p {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 0.75rem;
+  }
+  
+  .game-detail .back-link {
+    display: inline-block;
+    margin-top: 2rem;
+    text-decoration: none;
+    color: #0077cc;
+    font-weight: bold;
+    transition: color 0.2s ease;
+  }
+  
+  .game-detail .back-link:hover {
+    color: #004a99;
+  }
+  
+  .favourite-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: gold;
+    margin-top: 0.5rem;
+  }
+  #genreList {
+    padding: 1rem;
+  }
+  #genreList h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: #222;
+  }
+  
+  .main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    padding: 0.5rem 0;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    min-width: 150px;
+  }
+  
+  .dropdown-menu li {
+    padding: 0.5rem 1rem;
+  }
+  
+  .dropdown-menu li a {
+    color: white;
+    display: block;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-menu li:hover {
+    background: #444;
+  }
+  
