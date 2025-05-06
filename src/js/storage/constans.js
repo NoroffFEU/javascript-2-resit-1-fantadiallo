@@ -4,6 +4,7 @@ export const API_BASE = 'https://v2.api.noroff.dev';
 export const ACCESS_TOKEN_KEY = 'accessToken';
 export const USER_KEY = 'user';
 export const FAVOURITES_KEY = 'favourites'; 
+export const API_KEY = 'eee2984b-02cd-4800-82cb-79cab62424af';
 
 
 export const API_AUTH = `${API_BASE}/auth`;
