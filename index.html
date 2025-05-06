@@ -5,21 +5,31 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer type="module" src="/src/app.js"></script>
- 
     <title>Vite App</title>
   </head>
   <body>
     <header>
-      <nav></nav>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/profile/index.html">Profile</a></li>
+          <li class="dropdown">
+            <a href="#">Genres ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="/genre/index.html?genre=Action">Action</a></li>
+              <li><a href="/genre/index.html?genre=Adventure">Adventure</a></li>
+              <li><a href="/genre/index.html?genre=Puzzle">Puzzle</a></li>
+              <li><a href="/genre/index.html?genre=Sports">Sports</a></li>
+              <!-- Add more genres if needed -->
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      
     </header>
+
     <main>
-      <section class="home">
-        <h1>Welcome to Old Games</h1>
-        <p>Discover classic games from the past!</p>
-        <div id="gameList" class="containerGames">Loading games...</div>
-      </section>
+     
     </main>
-    
-   
- </body>
+  </body>
 </html>
