@@ -8,23 +8,29 @@
     <title>login</title>
 </head>
 <body>
-    <body>
-        <div id="loader" class="loader" style="display: none;">
-          <div class="spinner"></div>
-        </div>
-      
     <header>
-        <nav>
-            <div class="navLinks">
-                <a href="../index.html"><span>logo</span></a>
-              <a href="./register.html">register</a>
-            </div>
+        <nav class="main-nav container">
+          <a href="/" class="logo">OldGames</a>
+          <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+          <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <a href="/genre.html?genre=Puzzle">Puzzle</a>
+            <a href="/genre.html?genre=Action">Action</a>
+            <li class="auth-only"><a href="/profile/index.html">Profile</a></li>
+            <li class="guest-only"><a href="/auth/login.html">Login</a></li>
+            <li class="guest-only"><a href="/auth/register.html">Register</a></li>
+            <li class="auth-only"><button id="logoutBtn">Logout</button></li>
+          </ul>
         </nav>
-       </header>
+      </header>
     <main>
-        <h1>sign inn to your account</h1>
-
+        <div id="loader" class="loader" style="display: none;">
+            <div class="spinner"></div>
+          </div>
+  
         <form name="login" id="login-form">
+            <h1>sign inn to your account</h1>
+
             <label for="email" class="form-label"> Noroff email</label>
             <input type="email" id="email" name="email" required>
             <label for="password" class="form-label"> password</label>

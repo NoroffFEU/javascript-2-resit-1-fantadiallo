@@ -1,7 +1,8 @@
+import { API_BASE } from "../../storage/constans";
+import { headers } from "../../storage/headers";
+import { load, save } from "../../storage/key";
 import { hideLoader, showLoader } from "../../utils/loader";
-import { API_BASE } from "../storage/constans";
-import { headers } from "../storage/headers";
-import { load, save } from "../storage/key";
+
 
 /**
  * AuthAPI handles user authentication with login and registration.

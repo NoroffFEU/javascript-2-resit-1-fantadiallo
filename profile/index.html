@@ -8,6 +8,25 @@
     <title>profile</title>
 </head>
 <body>
+  <header>
+    <nav class="main-nav container">
+      <a href="/" class="logo">Logo</a>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <a href="/genre.html?genre=Puzzle">Puzzle</a>
+        <a href="/genre.html?genre=Action">Action</a>
+        <li class="auth-only"><a href="/profile/index.html">Profile</a></li>
+        <li class="guest-only"><a href="/auth/login.html">Login</a></li>
+        <li class="guest-only"><a href="/auth/register.html">Register</a></li>
+        <li class="auth-only"><button id="logoutBtn">Logout</button></li>
+      </ul>
+    </nav>
+  </header>
+      <main>
+        <h1>Welcome, <span id="profile-name"></span>!</h1>
+
+      </main>
     
 </body>
 </html>

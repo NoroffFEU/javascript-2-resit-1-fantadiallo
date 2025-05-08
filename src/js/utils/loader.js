@@ -1,4 +1,4 @@
-// src/js/utils/loader.js
+
 
 /**
  * Creates and displays a loader on the page.

@@ -1,6 +1,11 @@
 import AuthAPI from "../../api/auth";
-const api = new AuthAPI;
+const api = new AuthAPI();
 
+/**
+ * Handles the registration form submission.
+ * Collects user input, sends the registration request, and redirects on success.
+ * @param {Event} event - The form submission event.
+ */
 export async function onRegister(event) {
   event.preventDefault();
 
@@ -14,11 +19,13 @@ export async function onRegister(event) {
   };
 
   try {
+    // Send registration request
     const result = await api.auth.register(user);
     console.log("Registration successful", result);
 
-    alert("🎉 Registration successful! login please");
+    alert("🎉 Registration successful! Please log in.");
 
+    // Redirect to login page after a short delay
     setTimeout(() => {
       window.location.href = "/auth/login/index.html";
     }, 1500);

@@ -1,8 +1,12 @@
 import AuthAPI from "../../api/auth";
 
-
 const api = new AuthAPI();
 
+/**
+ * Handles the login form submission.
+ * Validates the input, sends the login request, and redirects on success.
+ * @param {Event} e - The form submission event.
+ */
 export async function onLogin(e) {
   e.preventDefault();
 
@@ -11,17 +15,19 @@ export async function onLogin(e) {
 
   const user = {
     email: formData.get("email")?.trim(),
-    password: formData.get("password"), // ✅ CORRECTED
+    password: formData.get("password"),
   };
 
   console.log("login request body:", user);
 
+  // Validate input
   if (!user.email || !user.password) {
     alert("Email and password are required.");
     return;
   }
 
   try {
+    // Send login request
     const response = await api.auth.login(user);
 
     if (response && response.name) {

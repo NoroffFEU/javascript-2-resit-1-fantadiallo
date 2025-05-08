@@ -3,6 +3,10 @@ import { createGameCard } from "../../utils/card/renderGameCard.js";
 
 let allGames = [];
 
+/**
+ * Renders the game list on the page.
+ * Fetches all games from the API, displays them, and adds search and sort functionality.
+ */
 export async function renderGameList() {
   const api = new OldGamesApi();
   const gameList = document.getElementById("gameList");
@@ -12,12 +16,17 @@ export async function renderGameList() {
   gameList.innerHTML = "Loading...";
 
   try {
+    // Fetch all games and display them
     allGames = await api.getAllGames();
     displayGames(allGames);
   } catch (error) {
     gameList.innerHTML = "Failed to load games.";
   }
 
+  /**
+   * Displays a list of games in the game list container.
+   * @param {Array<Object>} games - The array of game objects to display.
+   */
   function displayGames(games) {
     gameList.innerHTML = "";
     games.forEach((game) => {
@@ -26,7 +35,7 @@ export async function renderGameList() {
     });
   }
 
-
+  // Add search functionality
   if (searchInput) {
     searchInput.addEventListener("input", () => {
       const searchValue = searchInput.value.toLowerCase();
@@ -39,7 +48,7 @@ export async function renderGameList() {
     });
   }
 
- 
+  // Add sort functionality
   if (sortSelect) {
     sortSelect.addEventListener("change", () => {
       const value = sortSelect.value;
